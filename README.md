@@ -92,8 +92,3 @@ data-analysis/
 [ ] Data Aggregation & Grouping (groupby(), .pivot_table(), merging datasets)
 
 [ ] Data Visualization (Matplotlib & Seaborn charting)
-
-
-
-
-
