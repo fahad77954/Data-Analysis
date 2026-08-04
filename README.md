@@ -82,6 +82,7 @@ data-analysis/
 └── README.md
 
 🚀 Learning Roadmap
+
 [x] Python Foundations (CS50P: Functions, Loops, Logic, Exception Handling, File I/O)
 
 [x] NumPy Foundations (Contiguous Memory, N-Dim Arrays, Vectorization, Linear Algebra)
