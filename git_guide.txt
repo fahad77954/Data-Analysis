@@ -1,0 +1,3 @@
+Push a specific file: git add filename.ipynb ➔ git commit -m "add file" ➔ git push
+Push all updated changes: git add . ➔ git commit -m "update changes" ➔ git push
+(Tip: Run git status anytime to see which files are currently modified or staged!)
