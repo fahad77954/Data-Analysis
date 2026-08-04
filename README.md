@@ -80,3 +80,20 @@ data-analysis/
 ├── 02_pandas_series.ipynb
 ├── 03_pandas_dataframe.ipynb
 └── README.md
+🚀 Learning Roadmap
+[x] Python Foundations (CS50P: Functions, Loops, Logic, Exception Handling, File I/O)
+
+[x] NumPy Foundations (Contiguous Memory, N-Dim Arrays, Vectorization, Linear Algebra)
+
+[x] Pandas Series & DataFrames (Index Alignment, Wrangling, Boolean Slicing, Mutations)
+
+[ ] Data Cleaning & Missing Value Strategies (.fillna(), .dropna(), deduplication)
+
+[ ] Data Aggregation & Grouping (groupby(), .pivot_table(), merging datasets)
+
+[ ] Data Visualization (Matplotlib & Seaborn charting)
+
+
+
+
+
