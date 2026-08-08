@@ -98,4 +98,26 @@ Data-Analysis/
 ├── student_audit.py
 ├── messy_student_data.csv
 ├── cleaned_student_data.csv
+
+## 🚀 Learning Roadmap
+
+[x] Python Foundations (CS50P: Functions, Loops, Logic, Exception Handling, File I/O)
+
+[x] NumPy Foundations (Contiguous Memory, N-Dim Arrays, Vectorization, Linear Algebra)
+
+[x] Pandas Series & DataFrames (Index Alignment, Wrangling, Boolean Slicing, Mutations)
+
+[x] Data Cleaning & Missing Value Strategies (.fillna(), .dropna(), deduplication)
+
+[x] Data Aggregation & Grouping (groupby(), .pivot_table(), merging datasets)
+
+[x] Data Visualization (Matplotlib & Seaborn charting)
+
+
+
+
+
+
+
+
 └── README.md
