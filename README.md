@@ -98,8 +98,9 @@ Data-Analysis/
 ├── student_audit.py
 ├── messy_student_data.csv
 ├── cleaned_student_data.csv
+└── README.md
 
-## 🚀 Learning Roadmap
+🚀 Learning Roadmap
 
 [x] Python Foundations (CS50P: Functions, Loops, Logic, Exception Handling, File I/O)
 
@@ -112,12 +113,3 @@ Data-Analysis/
 [x] Data Aggregation & Grouping (groupby(), .pivot_table(), merging datasets)
 
 [x] Data Visualization (Matplotlib & Seaborn charting)
-
-
-
-
-
-
-
-
-└── README.md
