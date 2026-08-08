@@ -4,21 +4,25 @@
 ![Language](https://img.shields.io/badge/Language-Python_3.x-3776AB?style=for-the-badge&logo=python)
 ![Library](https://img.shields.io/badge/Library-NumPy-013243?style=for-the-badge&logo=numpy)
 ![Library](https://img.shields.io/badge/Library-Pandas-150458?style=for-the-badge&logo=pandas)
+![Library](https://img.shields.io/badge/Library-Matplotlib-11557c?style=for-the-badge&logo=python)
+![Library](https://img.shields.io/badge/Library-Seaborn-4C72B0?style=for-the-badge&logo=python)
 ![IDE](https://img.shields.io/badge/Environment-Jupyter-F37626?style=for-the-badge&logo=jupyter)
 
-Welcome to my **Data Analysis & Scientific Computing** repository! This space tracks my hands-on learning journey mastering low-level matrix mathematics, vectorized array processing, and real-world 2D data wrangling using Python's foundational data science stack: **NumPy** and **Pandas**.
+Welcome to my **Data Analysis & Scientific Computing** repository! This space tracks my hands-on learning journey—culminating in the completion of five comprehensive data projects—mastering low-level matrix mathematics, real-world data wrangling, and statistical visual storytelling using Python's foundational data science stack.
 
 ---
 
 ## 📌 Technical Scope & Core Concepts
 
-Moving from standard Python logic to high-performance scientific computing requires transitioning away from slow `for` loops toward hardware-optimized computational mechanics.
+Moving from standard Python logic to high-performance scientific computing requires transitioning away from slow `for` loops toward hardware-optimized computational mechanics, and learning to interpret raw numbers through visual geometry.
 
 ### Key Architectural Concepts Mastered:
 * **Memory Efficiency & Vectorization**: Utilizing NumPy’s contiguous C-array memory layouts to compute element-wise math across multi-dimensional arrays without standard Python loop overhead.
-* **Axis Operations & Aggregations**: Manipulating multi-dimensional matrices along vertical ($\text{axis}=0$) and horizontal ($\text{axis}=1$) directions for row and column statistics.
-* **1D Labeled Mechanics (Pandas Series)**: Mastered index-label alignment, explicit positional (`.iloc`) vs. label-based (`.loc`) data extraction, and handling type coercion ($int64 \rightarrow float64$) when missing values ($NaN$) are present.
-* **2D Tabular Data Wrangling (Pandas DataFrames)**: Building $N \times M$ datasets, broadcasting arithmetic across columns, performing multi-condition boolean filtering using bitwise logic (`&`, `|`), updating schemas dynamically, and importing external CSV records.
+* **Axis Operations & Aggregations**: Manipulating multi-dimensional matrices along vertical (axis=0) and horizontal (axis=1) directions for row and column statistics.
+* **1D Labeled Mechanics (Pandas Series)**: Mastered index-label alignment, explicit positional (`.iloc`) vs. label-based (`.loc`) data extraction, and handling type coercion (int64 -> float64) when missing values (NaN) are present.
+* **2D Tabular Data Wrangling (Pandas DataFrames)**: Building N x M datasets, broadcasting arithmetic across columns, performing multi-condition boolean filtering using bitwise logic (`&`, `|`), updating schemas dynamically, and importing external CSV records.
+* **Data Integrity & Pipeline Cleaning**: Designing scripts to audit raw datasets, resolve NaN conflicts safely without losing statistical weight, and standardize categorical string inputs.
+* **Visual Data Storytelling**: Translating complex tabular aggregations into readable geometric formats (distributions, categorical comparisons, and multi-variable correlation grids) using Matplotlib and Seaborn.
 
 ---
 
@@ -26,71 +30,72 @@ Moving from standard Python logic to high-performance scientific computing requi
 
 | Module | Core Topic | Primary Tech | Key Concepts & Solutions |
 | :--- | :--- | :---: | :--- |
-| **01** | **NumPy Foundations** | NumPy | Memory blocks, array creation (`arange`, `linspace`), shape manipulation (`ndim`, `shape`), broadcasting, axis statistics, dot/cross products. |
-| **02** | **Pandas Series Mechanics** | Pandas | 1D labeled arrays, explicit `.loc` vs positional `.iloc` indexing, index alignment, `.str` vectorized accessors, missing data handling. |
-| **03** | **Pandas DataFrame Mastery** | Pandas, CSV | 2D matrix selection, multi-condition boolean filtering, calculated revenue metrics, schema updates (`.rename()`), row appending, CSV ingestion. |
+| **01** | **NumPy Foundations** | NumPy | Memory blocks, array creation, shape manipulation, broadcasting, axis statistics. |
+| **02** | **Pandas Series Mechanics** | Pandas | 1D arrays, `.loc` vs `.iloc`, index alignment, vectorized string accessors. |
+| **03** | **Pandas DataFrame Mastery** | Pandas | 2D matrix selection, boolean filtering, calculated metrics, CSV ingestion. |
+| **04** | **Data Cleaning Strategies** | Pandas | Missing value imputation (`.fillna()`), dropping nulls (`.dropna()`), deduplication. |
+| **05** | **Aggregation & Grouping** | Pandas | Cross-sectional data rollups (`.groupby()`), pivot tables, and dataset merging. |
+| **06** | **Statistical Visualization** | Seaborn, Matplotlib | Figure canvases, KDE histograms, violin plots, scatter trends, and correlation heatmaps. |
 
 ---
 
 ## 💡 Key Module & Project Highlights
 
 ### ⚡ `01_numpy_foundations.ipynb` — Array Vectorization & Linear Algebra
-* **Objective:** Replace manual loop structures with C-optimized vectorized operations and compute linear algebra calculations across N-dimensional space.
-* **Technical Implementation:** Utilized `np.arange()`, `np.linspace()`, and random distributions. Managed 2D matrix shape transformations (`shape`, `ndim`), applied axis aggregations (`axis=0` down columns, `axis=1` across rows), applied dynamic scalar broadcasting, and performed matrix dot products (`np.dot`).
+* **Objective:** Replace manual loop structures with C-optimized vectorized operations.
+* **Technical Implementation:** Utilized `np.arange()` and `np.linspace()`. Managed 2D matrix shape transformations, applied axis aggregations, and applied dynamic scalar broadcasting.
 
 ### 🛠️ `02_pandas_series.ipynb` — 1D Labeled Mechanics & Index Alignment
-* **Objective:** Understand how Pandas binds data values to flexible index labels and handles missing dataset entries reliably.
-* **Technical Implementation:** Built indexed Series from Python dictionaries, demonstrated label alignment during arithmetic, extracted targeted values via `.loc[]` and `.iloc[]`, applied vectorized string cleanups using `.str`, and filled $NaN$ missing entries using `.fillna()`.
+* **Objective:** Understand how Pandas binds data values to flexible index labels.
+* **Technical Implementation:** Built indexed Series from Python dictionaries, demonstrated label alignment during arithmetic, extracted targeted values via `.loc[]`, and applied vectorized string cleanups.
 
-### 📈 `03_pandas_dataframe.ipynb` — 2D Data Wrangling & Schema Management
-* **Objective:** Manipulate realistic product inventory tables, dynamically alter schema metadata, and calculate revenue metrics.
-* **Technical Implementation:** Created multi-column inventory DataFrames, created custom indexing (`Product IDs`), filtered records using bitwise boolean masks (`(stock_qty < 50) | (unit_price >= 100)`), performed vector series adjustments (`price_adj`), updated schema column names (`.rename()`), appended new record Series, and ingested external dataset files.
+### 📈 `03_pandas_dataframe.ipynb` & `clean.py` — 2D Data Wrangling & Cleaning
+* **Objective:** Manipulate realistic inventory and student tables, alter schema metadata, and enforce data integrity.
+* **Technical Implementation:** Created custom indexing, filtered records using bitwise boolean masks, performed vector adjustments, and executed rigorous data cleaning pipelines to sanitize messy raw inputs into a reliable `cleaned_student_data.csv` file.
+
+### 🎨 `analysis.py` — Analytical Grouping & Visual Storytelling
+* **Objective:** Group cleaned data for statistical insights and render complex metrics into accessible visual formats.
+* **Technical Implementation:** Configured Matplotlib figure canvases and plotted Seaborn geometries. Built `sns.histplot` for study hour distributions, `sns.violinplot` to measure volume and spread across grade categories, and generated dynamic correlation matrices using `sns.heatmap` to identify hidden variable relationships.
 
 ---
 
 ## 🧠 Detailed Breakdown of Mastered Topics
 
-### 1. NumPy Foundations & Matrix Math
-* **Array Generation**: Sequences (`np.arange`), linear spaces (`np.linspace`), template matrices (`zeros`, `ones`, `empty`), and statistical random distributions (`np.random`).
-* **Attributes & Reshaping**: Dimension counts (`ndim`), tuple geometries (`shape`), and total element volume (`size`).
-* **Axes Aggregations**: Horizontal ($\text{axis}=1$) vs. Vertical ($\text{axis}=0$) statistical reductions (`sum`, `mean`, `std`, `var`).
-* **Boolean Masking**: Fast vector slicing using logical statement arrays (e.g., `a[a > 50]`).
-* **Linear Algebra**: Matrix transpositions (`.T`), matrix products (`np.dot`), and vector cross products (`np.cross`).
+### 1. NumPy & DataFrames (The Mathematical Engine)
+* **Axes Aggregations**: Horizontal (axis=1) vs. Vertical (axis=0) statistical reductions.
+* **Boolean Masking**: Fast vector slicing using logical statement arrays.
+* **Index Alignment**: Arithmetic operates strictly by matching index label names.
+* **Matrix Selection**: Multi-axis extraction using `df.loc[rows, cols]` and `df.iloc[row_idx, col_idx]`.
 
-### 2. Pandas Series Mechanics (1D Labeled Data)
-* **Index Alignment**: Arithmetic operates strictly by matching index label names; missing matches automatically populate $NaN$.
-* **Explicit Selection**: Position-based extraction via `.iloc[]` (0-based integer offset, exclusive) vs. label-based `.loc[]` (label matching, inclusive).
-* **Vectorized Accessors (`.str`)**: Broadcasting standard Python string operations across full data series.
-* **Missing Data Management**: Handling $NaN$ entries using `.fillna()`, cumulative math (`.cumsum()`), and dictionary value substitution (`.map()`).
+### 2. Data Cleaning & Missing Value Strategies
+* **Sanitization**: Identifying corrupted or missing data points (`.isna()`, `.isnull()`).
+* **Imputation vs. Deletion**: Strategically applying `.fillna()` to preserve row weight versus `.dropna()` for irreparable records.
+* **Deduplication**: Removing redundant matrix rows via `.drop_duplicates()` to prevent skewed statistical aggregations.
 
-### 3. Pandas DataFrame Mastery (2D Tabular Data)
-* **Creation & Structural Metadata**: Constructing tables from dictionary collections, setting custom indices (`.set_index()`), inspecting schemas (`.info()`, `.describe()`).
-* **Matrix Selection & Slicing**: Multi-axis extraction using `df.loc[rows, cols]` and `df.iloc[row_idx, col_idx]`.
-* **Data Mutation & Column Metrics**: Calculating derived columns (e.g., `monthly_revenue = unit_price * monthly_sales`) and broadcasting scalar updates.
-* **Schema Updates & Row Insertion**: Renaming columns and index keys safely via `.rename()`, and inserting new record entries using `.loc['NEW_ID']`.
-* **CSV Ingestion**: Importing flat files using `pd.read_csv()`, configuring index columns, and setting header parameters.
+### 3. Data Aggregation & Relational Merging
+* **Grouping (`.groupby()`)**: Splitting continuous data by categorical keys, applying mathematical functions (mean, sum, count), and combining results.
+* **Pivot Tables**: Reshaping 2D structures to view multi-dimensional summaries.
+* **Dataset Joins**: Combining separated CSV tables using inner/outer merge logic based on shared primary keys (e.g., `student_id`).
+
+### 4. Data Visualization 
+* **Canvas Management**: Controlling Matplotlib figure sizes (`figsize`), rotating axis labels (`plt.xticks`), and optimizing layout margins (`plt.tight_layout()`).
+* **Distributions & Counts**: Utilizing `sns.histplot` with Kernel Density Estimates (KDE) and `sns.countplot` for categorical volume.
+* **Categorical Spreads**: Deploying `sns.violinplot` to view both statistical ranges and density volume simultaneously.
+* **Correlation Mapping**: Calculating numeric matrix correlations (`.corr()`) and projecting them into color-coded `sns.heatmap` grids.
 
 ---
 
 ## 📁 Repository Organization
 
 ```text
-data-analysis/
+Data-Analysis/
 ├── 01_numpy_foundations.ipynb
 ├── 02_pandas_series.ipynb
 ├── 03_pandas_dataframe.ipynb
+├── 04_pandas_Data_Cleaning.ipynb
+├── analysis.py
+├── clean.py
+├── student_audit.py
+├── messy_student_data.csv
+├── cleaned_student_data.csv
 └── README.md
-
-🚀 Learning Roadmap
-
-[x] Python Foundations (CS50P: Functions, Loops, Logic, Exception Handling, File I/O)
-
-[x] NumPy Foundations (Contiguous Memory, N-Dim Arrays, Vectorization, Linear Algebra)
-
-[x] Pandas Series & DataFrames (Index Alignment, Wrangling, Boolean Slicing, Mutations)
-
-[ ] Data Cleaning & Missing Value Strategies (.fillna(), .dropna(), deduplication)
-
-[ ] Data Aggregation & Grouping (groupby(), .pivot_table(), merging datasets)
-
-[ ] Data Visualization (Matplotlib & Seaborn charting)
